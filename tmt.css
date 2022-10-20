@@ -1,0 +1,205 @@
+table {
+  font-size: 14px;
+  --size: 170px;
+  --black: rgb(0, 0, 0);
+  --black-alpha: rgba(0, 0, 0, 0.5);
+  --white: rgb(247, 247, 247);
+  --border: 1px solid rgba(255, 255, 255, 0.5);
+  --gray: rgb(31, 31, 31);
+}
+
+td[bgcolor="#FFFFFF"],
+td[bgcolor="#f4f4f4"][style="padding: 5px; "],
+td[style="padding: 2px;"] {
+  background-color: var(--gray);
+}
+
+td[style="padding: 2px; "] strong,
+td[style="padding: 2px;"] a.linkAzul,
+td[style="padding: 2px;"] a.linkAzul > strong,
+.userRankingInfo span {
+  color: rgb(114, 218, 114);
+  text-shadow: 2px 2px 2px var(--black-alpha);
+  transition: 0.3s;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+td[style="padding: 2px;"] a.linkAzul:hover,
+td[style="padding: 2px;"] a.linkAzul:hover > strong {
+  color: rgb(38, 197, 38);
+}
+
+.headerRow,
+.headerRow td {
+  font-size: 16px;
+}
+
+.headerRow div[align="right"] {
+  font-size: 12px;
+}
+
+.headerRow {
+  padding: 10px !important;
+
+  box-shadow: 5px 5px 13px var(--black-alpha);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-top: var(--border);
+  border-left: var(--border);
+}
+
+.headerRow strong,
+.headerRow td {
+  color: var(--white);
+  text-shadow: 2px 2px 2px var(--black-alpha);
+}
+
+/* sport and other info */
+tr[valign="middle"] td[width="50%"],
+tr[valign="middle"] td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: var(--white);
+}
+
+/* profile */
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  color: var(--white);
+}
+
+.cardSpace {
+  width: 90%;
+  height: 420px;
+  transition: transform 300ms;
+  margin: 40px;
+}
+
+.cardShadow,
+.cardBackground {
+  background-image: url("http://drive.google.com/uc?export=view&id=1nNFMamDhQWHyTh-rAK--d5Tp7LcQY9vz");
+}
+
+.cardShadow {
+  width: 90%;
+  height: 90%;
+  position: relative;
+  z-index: 3;
+  top: 18%;
+  left: 5%;
+  background-size: cover;
+  animation: backgroundPosition 15s infinite;
+  border-radius: 63px;
+  filter: blur(45px);
+  transition: transform 300ms, filter 300ms;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 6;
+  bottom: 90%;
+  overflow: hidden;
+  border-radius: 63px;
+  border-top: var(--border);
+  border-left: var(--border);
+}
+
+.cardBackground {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 3;
+  background-size: cover;
+  animation: backgroundPosition 15s linear infinite;
+  filter: blur(45px);
+}
+
+.cardBlurLayer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 6;
+  bottom: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.cardInside {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 9;
+  bottom: 200%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.cardHeader {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.imgSpace div {
+  width: 180px;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 63px;
+  margin: 12px;
+  box-shadow: 0 0 33px -9px black;
+  transition: width 300ms, height 300ms, border-radius 300ms, transform 300ms;
+}
+
+.userInfo {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userInfo h2 {
+  font-size: 2.8em;
+  margin: 15px 15px 0 15px;
+  text-shadow: -6px -15px 5.1px rgba(255, 255, 255, 0.33);
+  opacity: 65%;
+}
+
+.userInfo h3 {
+  font-size: 1.8em;
+  margin: 3px 24px;
+  opacity: 45%;
+}
+
+.userRankingInfo {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.userRankingInfo p {
+  width: 50%;
+}
+
+@keyframes backgroundPosition {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
