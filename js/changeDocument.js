@@ -56,10 +56,16 @@ function changeProfile(player) {
   </td>`;
 }
 
-function deleteDashedLine(number) {
-  const tdList = document.querySelectorAll(
-    `"td[background='imagenes/linea_0${number}.gif']"`
+function deleteDashedLine() {
+  let tdList = document.querySelectorAll(
+    "td[background='imagenes/linea_02.gif']"
   );
+
+  tdList.forEach((item) => {
+    item.attributes.background.value = "";
+  });
+
+  tdList = document.querySelectorAll("td[background='imagenes/linea_03.gif']");
 
   tdList.forEach((item) => {
     item.attributes.background.value = "";
@@ -128,8 +134,7 @@ function docReady(fn) {
 docReady(function () {
   const player = getData();
   changeProfile(player);
-  deleteDashedLine(2);
-  deleteDashedLine(3);
+  deleteDashedLine();
   changeSportData(player);
   changeStyles();
 });
